@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <title>Skyrim Potion Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyrim Potion Calculator</title>
 </head>
 <body>
-   <h1>Skyrim Potion Calculator</h1>
-   <input type="number" id="num1" placeholder="Enter first ingredient potency">
-   <input type="number" id="num2" placeholder="Enter second ingredient potency">
+    <h1>Skyrim Potion Calculator</h1>
 
-   <button onclick="calculate('add')">Strengthen Effect</button>
-   <button onclick="calculate('subtract')">Weaken Effect</button>
-   <button onclick="calculate('multiply')">Enhance Effect</button>
-   <button onclick="calculate('divide')">Dilute Effect</button>
+    <form id="potionForm">
+        <label for="num1">Enter First Ingredient Potency:</label>
+        <input type="number" id="num1" placeholder="Enter first ingredient potency" required>
+        
+        <label for="num2">Enter Second Ingredient Potency:</label>
+        <input type="number" id="num2" placeholder="Enter second ingredient potency" required>
+        
+        <label for="operation">Choose Operation:</label>
+        <select id="operation">
+            <option value="add">Strengthen Effect (Add)</option>
+            <option value="subtract">Weaken Effect (Subtract)</option>
+            <option value="multiply">Enhance Effect (Multiply)</option>
+            <option value="divide">Dilute Effect (Divide)</option>
+        </select>
 
-   <p id="result">Potion effect will display here</p>
+        <button type="submit">Calculate Potion Effect</button>
+    </form>
 
-   <script src="script.js"></script>
+    <p id="result">Potion effect will display here</p>
+
+    <script src="script.js"></script>
 </body>
 </html>
